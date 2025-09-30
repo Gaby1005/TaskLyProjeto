@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskLy</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <!--! COMEÇO DO CABEÇALHO -->
+    <header>
+        <img href="index.html" src="../images/logo.png" alt="logo TaskLy"> <!--! IMAGEM DO LOGO -->
+        <div class="nav"> <!--! MENU DE NAVEGAÇÃO -->
+            <a href="index.html">Home</a> <!--! LINK PARA A PÁGINA INICIAL -->
+            <a href="projetos.html">Projetos</a> <!--! LINK PARA A PÁGINA DE PROJETOS -->
+            <a href="prox.html">Próxima semana</a> <!--! LINK PARA A PÁGINA DE PROJETOS -->
+        </div>
+        
+        <div class="header-right">
+            <div class="bTarefa"> <!--! BOTÃO PARA ADICIONAR UMA NOVA TAREFA -->
+                <button id="novaTarefaBtn">+ Nova Tarefa</button> <!--! BOTÃO PARA ADICIONAR UMA NOVA TAREFA -->
+            </div>
+
+            <div class="pesquisa"> <!--! BARRA DE PESQUISA -->
+                <input type="text" placeholder="Pesquisar..."> <!--! CAMPO DE PESQUISA -->
+                <button>Buscar</button> <!--! BOTÃO DE PESQUISA --> 
+            </div>
+        </div>
+    </header> <!--! FIM DO CABEÇALHO --> 
+
+    <section class="banner"> <!--! BANNER PRINCIPAL -->
+        <h1>TaskLy</h1> <!--! TÍTULO DO BANNER -->
+        <p>Organize suas tarefas e projetos de forma simples e eficiente.</p> <!--! DESCRIÇÃO DO BANNER --> 
+    </section> 
+
+    <div class="container"> <!--! CONTAINER PRINCIPAL -->
+
+     
+
+        <div class="Hoje"> <!--! CAIXA DE TAREFAS DO DIA -->
+            <h2 href="hoje.html">Hoje</h2> <!--LINK PARA A PAGINA HOJE-->
+            <p>Veja as tarefas do dia.</p>
+        </div>
+
+        <div class="prox"> <!--! CAIXA DE PROXIMAS TAREFAS -->
+            <h2 href="prox.html">Prox 7 dias</h2> <!--LINK PARA A PAGINA PROX-->
+            <p>Veja as próximas tarefas da semana.</p>
+        </div>
+
+        <div class="projetos"> <!--! CAIXA DE PROJETOS -->
+            <h2 href="projetos.html">Projetos</h2> <!--LINK PARA A PAGINA PROJETOS-->   
+            <p>Veja os projetos em andamento.</p>
+        </div>
+      
+    </div>
+    <!--! FIM DO CONTAINER PRINCIPAL -->
+
+    <!-- Modal Nova Tarefa -->
+    <div id="modalNovaTarefa" class="modal"> <!--! MODAL PARA ADICIONAR UMA NOVA TAREFA -->
+        <div class="modal-content"> <!--! CONTEÚDO DO MODAL -->
+            <h2>Nova Tarefa</h2>
+            <form id="formNovaTarefa">
+                <div class="form-group">
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" name="titulo" required>
+                </div>
+                
+                <div class="form-group"> <!--! GRUPO DE CAMPOS DO FORMULÁRIO -->
+                    <label for="descricao">Descrição:</label> <!--! Rótulo do campo de descrição -->
+                    <textarea id="descricao" name="descricao" placeholder="Descreva sua tarefa..."></textarea>
+                </div>
+                
+                <div class="form-group"> <!--! GRUPO DE CAMPOS DO FORMULÁRIO -->
+                    <label for="prazo">Prazo:</label> <!--! Rótulo do campo de prazo -->
+                    <input type="date" id="prazo" name="prazo" required>
+                </div>
+                
+                <div class="form-group"> <!--! GRUPO DE CAMPOS DO FORMULÁRIO -->
+                    <label for="prioridade">Prioridade:</label> <!--! Rótulo do campo de prioridade -->
+                    <select id="prioridade" name="prioridade" required> <!--! CAMPO DE SELEÇÃO DE PRIORIDADE -->
+                        <option value="">Selecione a prioridade</option> <!--! OPÇÃO PADRÃO -->
+                        <option value="baixa">Baixa</option> <!--! OPÇÃO DE PRIORIDADE BAIXA -->
+                        <option value="media">Média</option> <!--! OPÇÃO DE PRIORIDADE MÉDIA -->
+                        <option value="alta">Alta</option> <!--! OPÇÃO DE PRIORIDADE ALTA -->
+                    </select>
+                </div>
+                
+
+                
+                <div class="form-group"> <!--! GRUPO DE CAMPOS DO FORMULÁRIO -->
+                    <label for="categoria">Categoria:</label> <!--! Rótulo do campo de categoria -->
+                    <select id="categoria" name="categoria" required> <!--! CAMPO DE SELEÇÃO DE CATEGORIA -->
+                        <option value="">Selecione a categoria</option> <!--! OPÇÃO PADRÃO -->
+                         <option value="hoje">Hoje</option> <!--! OPÇÃO DE CATEGORIA HOJE -->
+                        <option value="tarefasDoDia">Tarefas do dia</option> <!--! OPÇÃO DE CATEGORIA TAREFAS DO DIA -->
+                        <option value="prox">Prox. 7 dias</option> <!--! OPÇÃO DE CATEGORIA PRO.X 7 DIAS -->
+                        <option value="projetos">Projetos</option> <!--! OPÇÃO DE CATEGORIA PROJETOS -->
+                    </select>
+                </div>
+                
+                <div class="modal-buttons"> <!--! GRUPO DE BOTÕES DO MODAL -->
+                    <button type="button" class="btn-cancel" id="cancelarBtn">Cancelar</button> <!--! BOTÃO DE CANCELAR -->
+                    <button type="submit" class="btn-save">Salvar</button> <!--! BOTÃO DE SALVAR -->
+                </div>
+            </form>
+        </div>
+    </div>
+
+        <footer> <!--! RODAPÉ -->
+            <p>&copy; 2025 TaskLy|Todos os direitos reservados.</p> <!--! COPYRIGHT -->
+        </footer> <!--! FIM DO RODAPÉ -->
+        
+        <script src="../JS/java.js"></script>
+</body>
+</html>

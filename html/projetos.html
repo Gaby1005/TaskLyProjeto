@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskLy</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+    <!--! COMEÇO DO CABEÇALHO -->
+    <header>
+        <img href="index.html" src="../images/logo.png" alt="logo TaskLy"> <!--! IMAGEM DO LOGO -->
+        <div class="nav"> <!--! MENU DE NAVEGAÇÃO -->
+            <a href="index.html">Home</a> <!--! LINK PARA A PÁGINA INICIAL -->
+            <a href="projetos.html">Projetos</a> <!--! LINK PARA A PÁGINA DE PROJETOS -->
+        </div>
+        
+        <div class="header-right">
+            <div class="bTarefa"> <!--! BOTÃO PARA ADICIONAR UM NOVO PROJETO -->
+                <button id="novoProjetoBtn">+ Novo projeto</button> <!--! BOTÃO PARA ADICIONAR UM NOVO PROJETO -->
+            </div>
+
+            <div class="pesquisa"> <!--! BARRA DE PESQUISA -->
+                <input type="text" placeholder="Pesquisar..."> <!--! CAMPO DE PESQUISA -->
+                <button>Buscar</button> <!--! BOTÃO DE PESQUISA --> 
+            </div>
+        </div>
+    </header> <!--! FIM DO CABEÇALHO --> 
+
+     <section class="banner"> <!--! BANNER PRINCIPAL -->
+        <h1>TaskLy</h1> <!--! TÍTULO DO BANNER -->
+        <p>Organize e acompanhe seus projetos de forma eficiente.</p> <!--! DESCRIÇÃO DO BANNER --> 
+    </section> 
+
+     <div class="main-container-projetos">
+        <div class="secao-projetos">
+            <h2>Projetos</h2>
+            <div id="lista-projetos" class="lista-projetos">
+                <!-- Projetos aparecerão aqui -->
+            </div>
+        </div>
+    </div>    
+
+
+         <!-- Modal Novo Projeto -->
+    <div id="modalNovoProjeto" class="modal"> <!--! MODAL PARA ADICIONAR UM NOVO PROJETO -->
+        <div class="modal-content"> <!--! CONTEÚDO DO MODAL -->
+            <h2>Novo Projeto</h2>
+            <form id="formNovoProjeto">
+                <div class="form-group">
+                    <label for="tituloProjeto">Título do Projeto:</label>
+                    <input type="text" id="tituloProjeto" name="tituloProjeto" required>
+                </div>
+                
+                <div class="form-group"> <!--! GRUPO DE CAMPOS DO FORMULÁRIO -->
+                    <label for="descricaoProjeto">Descrição:</label> <!--! Rótulo do campo de descrição -->
+                    <textarea id="descricaoProjeto" name="descricaoProjeto" placeholder="Descreva seu projeto..."></textarea>
+                </div>
+                
+                <div class="form-group"> <!--! GRUPO DE CAMPOS DO FORMULÁRIO -->
+                    <label for="prazoProjeto">Prazo:</label> <!--! Rótulo do campo de prazo -->
+                    <input type="date" id="prazoProjeto" name="prazoProjeto" required>
+                </div>
+                
+                <div class="modal-buttons"> <!--! GRUPO DE BOTÕES DO MODAL -->
+                    <button type="button" class="btn-cancel" id="cancelarProjetoBtn">Cancelar</button> <!--! BOTÃO DE CANCELAR -->
+                    <button type="submit" class="btn-save">Salvar Projeto</button> <!--! BOTÃO DE SALVAR -->
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+
+     <footer> <!--! RODAPÉ -->
+        <p>&copy; 2025 TaskLy|Todos os direitos reservados.</p> <!--! COPYRIGHT -->
+    </footer> <!--! FIM DO RODAPÉ -->
+    
+    <script src="../JS/projetos.js"></script>
